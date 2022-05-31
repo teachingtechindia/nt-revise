@@ -1,0 +1,17 @@
+<div class="heading-container">
+  <h1>Todos</h1>
+  <button (click)="addNewTodo()"
+    class="btn btn-primary">Add New Todo</button>
+</div>
+
+<ul>
+  <li *ngFor="let todo of todos; let i = index">
+    <h2>{{todo?.task}}</h2>
+    <p>{{todo?.desc}}</p>
+
+    <div *ngIf="todo.isCompleted"> COMPLETED</div>
+    <div *ngIf="!todo.isCompleted">NOT COMPLETED</div>
+  </li>
+</ul>
+
+<!-- <app-create-todo (newTodo)="newTodoHandler($event)"></app-create-todo> -->

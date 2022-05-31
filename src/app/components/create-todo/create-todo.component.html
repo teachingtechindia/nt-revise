@@ -1,0 +1,24 @@
+<h1>Create a New todo</h1>
+
+<div class="m-1 p-5">
+  <div>
+    <label for="task"
+      class="form-label">
+      Name
+    </label>
+    <input #task
+      class="form-control" />
+  </div>
+
+  <div class="mt-5">
+    <label for="desc"
+      class="form-label">
+      Description
+    </label>
+    <input #desc
+      class="form-control" />
+  </div>
+
+  <button (click)="addTodo()"
+    class="btn btn-success mt-5">Add Todo</button>
+</div>
